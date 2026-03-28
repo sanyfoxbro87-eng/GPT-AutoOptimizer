@@ -1,0 +1,90 @@
+#cgpt-auto-opt-panel {
+  position: fixed;
+  z-index: 2147483647;
+  width: 290px;
+  max-width: calc(100vw - 20px);
+  background: rgba(20, 22, 26, 0.95);
+  color: #f2f4f8;
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+  font: 12px/1.4 system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+#cgpt-auto-opt-panel[data-position="bottom-right"] { right: 10px; bottom: 10px; }
+#cgpt-auto-opt-panel[data-position="bottom-left"] { left: 10px; bottom: 10px; }
+#cgpt-auto-opt-panel[data-position="top-right"] { right: 10px; top: 10px; }
+#cgpt-auto-opt-panel[data-position="top-left"] { left: 10px; top: 10px; }
+#cgpt-auto-opt-panel .cgpt-auto-opt-title {
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+#cgpt-auto-opt-panel .cgpt-auto-opt-stats {
+  color: #d4d7de;
+  margin-bottom: 8px;
+}
+#cgpt-auto-opt-panel .cgpt-auto-opt-actions {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+#cgpt-auto-opt-panel button {
+  appearance: none;
+  border: 0;
+  border-radius: 8px;
+  background: #2d6cdf;
+  color: white;
+  padding: 6px 8px;
+  cursor: pointer;
+  font: inherit;
+}
+#cgpt-auto-opt-panel button:hover { filter: brightness(1.08); }
+#cgpt-auto-opt-panel.is-disabled { opacity: 0.72; }
+
+.cgpt-auto-opt-placeholder {
+  border: 1px dashed rgba(120,130,150,0.55);
+  border-radius: 12px;
+  margin: 10px 0;
+  padding: 10px;
+  background: rgba(120,130,150,0.07);
+}
+.cgpt-auto-opt-label {
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.cgpt-auto-opt-preview {
+  font-size: 12px;
+  color: #c9d1db;
+  margin-bottom: 8px;
+  white-space: normal;
+}
+.cgpt-auto-opt-restore {
+  appearance: none;
+  border: 0;
+  border-radius: 8px;
+  background: #2d6cdf;
+  color: white;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+.cgpt-auto-opt-code-summary {
+  margin: 8px 0;
+  border: 1px solid rgba(120,130,150,0.45);
+  border-radius: 10px;
+  padding: 4px 8px;
+  background: rgba(255,255,255,0.03);
+}
+.cgpt-auto-opt-media-summary {
+  margin: 8px 0;
+  border: 1px solid rgba(120,130,150,0.45);
+  border-radius: 10px;
+  padding: 6px 8px;
+  background: rgba(255,255,255,0.03);
+  font-size: 12px;
+}
+.cgpt-auto-opt-soft-hidden {
+  opacity: 0.4 !important;
+  filter: saturate(0.7);
+}

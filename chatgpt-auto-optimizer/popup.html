@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>ChatGPT Auto Optimizer</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="wrap">
+    <h1>Auto Optimizer</h1>
+    <label class="row"><input type="checkbox" id="enabled"> Enable automatic optimization</label>
+    <label class="row">Keep latest message pairs
+      <input type="number" id="keepPairs" min="2" max="40" step="1">
+    </label>
+    <label class="row"><input type="checkbox" id="strictMode"> Strict mode (replace older messages with placeholders)</label>
+    <label class="row"><input type="checkbox" id="simplifyOldCode"> Collapse old code blocks</label>
+    <label class="row"><input type="checkbox" id="simplifyOldMedia"> Hide old media</label>
+    <label class="row"><input type="checkbox" id="showStatus"> Show status panel on page</label>
+    <label class="row">Status panel position
+      <select id="statusPosition">
+        <option value="bottom-right">Bottom right</option>
+        <option value="bottom-left">Bottom left</option>
+        <option value="top-right">Top right</option>
+        <option value="top-left">Top left</option>
+      </select>
+    </label>
+    <div class="buttons">
+      <button id="save">Save</button>
+      <button id="restore">Restore all on current tab</button>
+      <button id="run">Run now on current tab</button>
+    </div>
+    <p class="note">This works automatically on opened and newly loaded ChatGPT chats. If the site layout changes, selectors may need adjustment.</p>
+    <div id="status"></div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
